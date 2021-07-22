@@ -3,6 +3,7 @@ Disallow: /css/
 Disallow: /audio/
 Disallow: /font-awesome/
 Disallow: /fonts/
+Sitemap: https://elenahodova.github.io/sitemap.xml
 
 User-agent: Yandex
 Disallow: /css/
