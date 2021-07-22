@@ -9,6 +9,7 @@ body,
 html {
     width: 100%;
     height: 100%;
+    /*overflow-x:visible !important;*/
 }
 
 body,
@@ -200,7 +201,17 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/hodova-bg.jpg) no-repeat 70% center;
+    background: rgba(38, 38, 38, 0.3) url(../img/hodova-bg.jpg) no-repeat 70% center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.intro-header:hover{
+    background: rgba(38, 38, 38, 0.4) url(../img/hodova-bg.jpg) no-repeat 70% center;
     background-size: cover;
 }
 
@@ -218,6 +229,9 @@ h6 {
 .intro-header:hover {
    /* -webkit-filter: brightness(.9);
     filter: brightness(.9);*/
+}
+.navbar-header img{
+    height: 80%;
 }
 
 .intro-message {
@@ -273,6 +287,11 @@ h6 {
     border-radius: .5%;
 }
 
+.owl-carousel
+{
+    touch-action: manipulation;
+}
+
 .round {
     border-radius: 100px; /* Радиус скругления */
     border: 3px solid grey; /* Параметры рамки */
@@ -290,7 +309,8 @@ h6 {
 }
 
 .pop_form button {
-    margin: auto 30%;
+    display: block;
+    margin: 0 auto 0;
     padding: 10px;
     border-radius: 7%;
    /* background: -moz-linear-gradient(#ffc9a8, rgba(255, 201, 168, 0.55), #ffc9a8);
@@ -362,7 +382,9 @@ h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background: rgba(38, 38, 38, 0.2) url(../img/banner-bg.jpg) no-repeat center center;
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
 /*.banner img{
@@ -379,9 +401,11 @@ h6 {
 
     /*    height: auto;*/
     background-size: cover;
-    -moz-transition: all .9s;
-    -webkit-transition: all .9s;
-    transition: all .9s;
+    -webkit-transition: all 1.9s;
+    -moz-transition: all 1.9s;
+    -ms-transition: all 1.9s;
+    -o-transition: all 1.9s;
+    transition: all 1.9s;
     background-position: center center;
 
 }
@@ -389,7 +413,7 @@ h6 {
 .banner:hover {
 
     /* transform: scale(0.5);*/
-    background-position: inherit;
+    background-position: unset;
 
 }
 
@@ -421,7 +445,7 @@ h6 {
     .banner h2,h3 {
         margin: 0;
         text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-        font-size: 3em;
+        font-size: 2em;
     }
 
     ul.banner-social-buttons > li {
