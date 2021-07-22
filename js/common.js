@@ -6,28 +6,44 @@ $(document).ready(function () {
     var varWidth = 319;
     var bodyWidth = $('html').width();
     if (bodyWidth > varWidth) {
+/*        $("canvas.snow").let_it_snow({
+            speed: 1,
+            size: 10,
+            count: 26,
+            image: "img/snowflake.png"
+        });*/
         /*        $(".owl-carousel").remove();*/
         $('#change1').html('<div id="carousel1" class="owl-carousel owl-carousel1">' +
-            '<div> <img class="img-responsive" src="img/свадьба.jpg" alt="свадьба"> </div>' +
-            '<div> <img class="img-responsive" src="img/ходова.jpg" alt="ходова"> </div>' +
-            '<div> <img class="img-responsive" src="img/радион.jpg" alt="радион"> </div>' +
-            '<div> <img class="img-responsive" src="img/ведущая.jpg" alt="ведущая"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/свадьба.jpg" alt="свадьба"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/ходова.jpg" alt="ходова"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/радион.jpg" alt="радион"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/ведущая.jpg" alt="ведущая"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/ведущий.jpg" alt="ведущий"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/обряд.jpg" alt="обряд"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/тамада.jpg" alt="тамада"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/елена.jpg" alt="елена"> </div>' +
             '</div>');
 
         $('#change2').html('<div id="carousel2" class="owl-carousel owl-carousel2">' +
-            '<div> <img class="img-responsive" src="img/романтика.jpg" alt="романтика"> </div>' +
-            '<div> <img class="img-responsive" src="img/звук.jpg" alt="звук"> </div>' +
-            '<div> <img class="img-responsive" src="img/фотосессия.jpg" alt="фотосессия"> </div>' +
-            '<div> <img class="img-responsive" src="img/развлечения.jpg" alt="развлечения"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/романтика.jpg" alt="романтика"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/звук.jpg" alt="звук"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/фотосессия.jpg" alt="фотосессия"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/развлечения.jpg" alt="развлечения"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/праздники.jpg" alt="праздники"> </div>' +
             '</div>');
 
         $('#change3').html('<div id="carousel3" class="owl-carousel owl-carousel3">' +
-            '<div> <img class="img-responsive" src="img/музыканты.jpg" alt="музыканты"> </div>' +
-            '<div> <img class="img-responsive" src="img/настроение.jpg" alt="настроение"> </div>' +
-            '<div> <img class="img-responsive" src="img/праздники.jpg" alt="праздники"> </div>' +
-            '<div> <img class="img-responsive" src="img/юбилей.jpg" alt="юбилей"> </div>' +
-            '</div>')
-
+            '<div> <img class="owl-lazy img-responsive" data-src="img/музыканты.jpg" alt="музыканты"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/настроение.jpg" alt="настроение"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/праздники.jpg" alt="праздники"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/юбилей.jpg" alt="юбилей"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/задор.jpg" alt="задор"> </div>' +
+            '</div>');
+        $('#change4').html('<div id="carousel4" class="owl-carousel owl-carousel4">' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/декорации.jpg" alt="декорации"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/украшение.jpg" alt="украшение"> </div>' +
+            '<div> <img class="owl-lazy img-responsive" data-src="img/оформление.jpg" alt="оформление"> </div>' +
+            '</div>');
     }
 
 //Слайдер
@@ -36,6 +52,8 @@ $(document).ready(function () {
     owl1.owlCarousel({
         items: 1,
         autoplay: true,
+        lazyLoad:true,
+        lazyLoadEager: 2,
         loop: true,
         autoplayHoverPause: true,
         autoplaySpeed: 1000, /* скорость смены слайда*/
@@ -56,9 +74,10 @@ $(document).ready(function () {
     var owl2 = $("#carousel2");
     owl2.owlCarousel({
         autoplaySpeed: 1500,
-
         items: 1,
         autoplay: true,
+        lazyLoad:true,
+        lazyLoadEager: 2,
         loop: true,
         autoplayHoverPause: true
     });
@@ -67,14 +86,28 @@ $(document).ready(function () {
     var owl3 = $("#carousel3");
     owl3.owlCarousel({
         autoplaySpeed: 2000,
-
         items: 1,
         autoplay: true,
+        lazyLoad:true,
+        lazyLoadEager: 2,
         loop: true,
-        autoplayHoverPause: true,
+        autoplayHoverPause: true
 
     });
     scrollSlider(owl3);
+
+    var owl4 = $("#carousel4");
+    owl4.owlCarousel({
+        autoplaySpeed: 2000,
+        items: 1,
+        autoplay: true,
+        lazyLoad:true,
+        lazyLoadEager: 2,
+        loop: true,
+        autoplayHoverPause: true
+
+    });
+    scrollSlider(owl4);
 
     /*    Скролл на слайдере*/
 
@@ -117,7 +150,7 @@ $(document).ready(function () {
 
 
     <!--Звуковой эффект в меню-->
-    var soundLink1 = $("#beep-1")[0];
+/*    var soundLink1 = $("#beep-1")[0];
     var soundLink2 = $("#beep-2")[0];
     var soundLink3 = $("#beep-3")[0];
 
@@ -136,7 +169,7 @@ $(document).ready(function () {
     $(".nav>li>:eq(3),.footer-menu>li>a:eq(2),.navbar-header>a").mouseenter(function () {
 
         soundLink1.play();
-    });
+    });*/
 
     //Аякс отправка форм
 
